@@ -17,10 +17,16 @@ public class Main {
         // name is private
 //        s.name = "Malideedu";
 
-        Student s2 = new Student(1, "Alok", 5);
-        s2.printDetails();
+//        Student s2 = new Student(1, "Alok", 5);
+//        s2.printDetails();
 
 
+        Student s = new Student(1, "Alok", 2);
+        Student s1 = s;
+
+        Student s2 = new Student(s);
+
+        System.out.println("DEBUG");
 
 
     }
@@ -28,3 +34,5 @@ public class Main {
 
 // .java -> .class -> bytecode -> runs
 // Main.java -> Main.class ->
+
+// y address are stored in stack and valuse are stored in heap?

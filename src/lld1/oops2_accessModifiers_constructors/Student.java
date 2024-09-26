@@ -17,6 +17,12 @@ public class Student {
         rank = sRank;
     }
 
+    public Student(Student copyStudent){
+        name = copyStudent.name;
+        rank = copyStudent.rank;
+        rollNo = copyStudent.rollNo;
+    }
+
     void printDetails(){
         System.out.println("Students details : ");
         System.out.println("Roll Number: " + rollNo);
