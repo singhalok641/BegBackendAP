@@ -1,4 +1,5 @@
-package lld1.adderSubtractor;
+package lld1.synchronization.adderSubtractorSynchronized;
+
 
 public class Adder implements Runnable{
 
@@ -10,8 +11,10 @@ public class Adder implements Runnable{
 
     @Override
     public void run() {
-        for(int i=1; i<=10000 ; i++){
-            count.value += i;
+        for(int i=1; i<=10000 ; i++) {
+            synchronized (count) {
+                count.value += i;
+            }
         }
     }
 }
