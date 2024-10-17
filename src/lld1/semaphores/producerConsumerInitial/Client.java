@@ -1,4 +1,4 @@
-package lld1.synchronization.producerConsumerInitial;
+package lld1.semaphores.producerConsumerInitial;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;

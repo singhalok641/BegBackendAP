@@ -1,14 +1,14 @@
-package lld1.synchronization.producerConsumerInitial;
+package lld1.semaphores.producerConsumerInitial;
 
 import java.util.Queue;
 
-public class Consumer implements Runnable{
+public class Producer implements Runnable{
 
     private Queue<Object> store;
     private int maxSize;
     private String name;
 
-    public Consumer(Queue<Object> store, int maxSize, String name) {
+    public Producer(Queue<Object> store, int maxSize, String name) {
         this.store = store;
         this.maxSize = maxSize;
         this.name = name;
@@ -18,10 +18,10 @@ public class Consumer implements Runnable{
     public void run() {
         while(true){
             synchronized (store) {
-                if (!store.isEmpty()) {
-                    System.out.println(this.name +" Removing an element: "
+                if (store.size() < maxSize) {
+                    System.out.println(this.name +" Adding an element: "
                             + store.size());
-                    store.remove();
+                    store.add(new Object());
                 }
             }
         }
