@@ -51,6 +51,9 @@ public class Iphone {
 
     @Override
     public String toString() {
+
+        Object obj = new Iphone();
+
         return "Iphone{" +
                 "number=" + number +
                 ", processorVersion=" + processorVersion +
