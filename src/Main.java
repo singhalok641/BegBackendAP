@@ -3,6 +3,9 @@ import lld1.semaphores.producerConsumerFinal.Producer;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +22,12 @@ public class Main {
                 .format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         System.out.println(date);
+
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(1, 2);
+        map.put(1, 3);
+
+        System.out.println(map.values());
 
     }
 }
