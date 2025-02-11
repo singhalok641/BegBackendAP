@@ -1,7 +1,10 @@
 package lld1.doubtSolving3;
 
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.stream.Collectors;
 
 /*
@@ -29,8 +32,30 @@ public class FruitFilter {
     }
 
     public static void main(String[] args) {
-        List<String> fruits = List.of("Apple", "Banana", "Avocado", "Grapes");
-        List<String> res = filterFruitsStartingWithA(fruits);
-        System.out.println(res);
+//        List<String> fruits = List.of("Apple", "Banana", "Avocado", "Grapes");
+//        List<String> res = filterFruitsStartingWithA(fruits);
+//        System.out.println(res);
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        pq.add(1);
+        pq.add(6);
+        pq.add(5);
+
+//        for(int val: pq){
+//            System.out.println(val);
+//        }
+
+//        while(!pq.isEmpty()){
+//            System.out.println(pq.poll());
+//        }
+//        System.out.println(pq);
+
+        Queue<Integer> q = new LinkedList<>();
+        q.add(null);
+        q.add(null);
+//        q.add(7);
+
+        System.out.println(!q.isEmpty());
     }
 }
