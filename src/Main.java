@@ -1,4 +1,3 @@
-import lld1.I1;
 import lld1.semaphores.producerConsumerFinal.Producer;
 
 import java.time.LocalDateTime;
