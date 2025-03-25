@@ -9,11 +9,12 @@ import tictactoe.models.Player;
 import java.util.List;
 
 public class GameController {
-    public Game createGame(int size, List<Player> players) {
+    public Game createGame(int size, List<Player> players, String winningStrategy) {
         try {
             return Game.getBuilder()
-                    .setBoard(new Board(size))
+                    .setSize(size)
                     .setPlayers(players)
+                    .setGameWinningStrategy(winningStrategy)
                     .build();
         }
         catch (Exception e) {
@@ -33,5 +34,9 @@ public class GameController {
 
     public void executeGame(Game game){
         game.makeNextMove();
+    }
+
+    public Player getWinner(Game game) {
+        return game.getWinner();
     }
 }

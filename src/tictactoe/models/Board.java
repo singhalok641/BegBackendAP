@@ -9,6 +9,7 @@ public class Board {
 
     public Board(int size) {
         this.size = size;
+        this.board = new ArrayList<>();
         /*
         [cell(0,0), cell(0,1), cell(0,2)],
         [cell(1,0), cell(1,1), cell(1,2)],

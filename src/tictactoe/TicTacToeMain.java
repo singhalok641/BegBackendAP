@@ -47,7 +47,9 @@ public class TicTacToeMain {
             players.add(new Bot(botName, botSymbol, BotDifficultyLevel.EASY));
         }
 
-        Game game = gameController.createGame(size, players);
+        String winningStrategy = "OrderOne";
+
+        Game game = gameController.createGame(size, players, winningStrategy);
 
         // I want to check the gameStatus consistently
         // If the game status is IN_PROGRESS
@@ -57,9 +59,14 @@ public class TicTacToeMain {
             gameController.displayBoard(game);
 
             gameController.executeGame(game);
-
         }
 
+        System.out.println("Game has ended. Result was: ");
+
+        if(!game.getGameState().equals(GameState.DRAW)){
+            System.out.println("Winner is: " + gameController.getWinner(game).getName());
+            gameController.displayBoard(game);
+        }
 
     }
 }
